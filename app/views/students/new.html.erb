@@ -1,0 +1,11 @@
+<h3>Student Form</h3>
+
+<%= form_tag :students do %>
+
+    <p><label>First Name: </label><%= text_field_tag :first_name %></p>
+    <p><label>Last Name: </label><%= text_field_tag :last_name %></p>
+    
+    <p><%= submit_tag "Submit Student" %></p>
+<% end %>
+
+<%= params.inspect %>
