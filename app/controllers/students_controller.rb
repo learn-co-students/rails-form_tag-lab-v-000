@@ -2,7 +2,6 @@ class StudentsController < ApplicationController
   
   def index
     @students = Student.all
-# byebug
   end
 
   def show
@@ -13,11 +12,8 @@ class StudentsController < ApplicationController
   end
 
   def create
-# byebug
     @student=Student.create(first_name: params[:first_name], last_name: params[:last_name])
-# byebug
     redirect_to student_path(@student)
-
   end
 
 end
