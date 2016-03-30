@@ -1,0 +1,20 @@
+<h1>Student Form</h1>
+
+
+
+
+
+
+
+
+ 
+<%= form_tag('/students', method: :post) do %>
+  <label>First Name:</label><br>
+  <%= text_field_tag :first_name %><br>
+ 
+  <label>Last Name</label><br>
+  <%= text_area_tag :last_name %><br>
+ 
+  <%= submit_tag "Submit Student" %>
+<% end %>
+<%= params.inspect %>
