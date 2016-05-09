@@ -1,3 +1,15 @@
-<%= render "form" %>
+<h1>Student Form</h1>
 
-<%= session[:form_params] %>
+<%= form_tag students_path do %>
+
+<label>First Name:</label>
+<%= text_field_tag :first_name %>
+
+<label>Last Name:</label>
+<%= text_field_tag :last_name %>
+
+<%= submit_tag "Submit Student"%>
+
+<% end %>
+
+<%= params.inspect %>
