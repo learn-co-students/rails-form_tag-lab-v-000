@@ -17,8 +17,10 @@ describe 'Multiple students' do
   end
 end
 
+
+
 describe 'form page' do
-  it 'renders the form with the new action' do
+   it 'renders the form with the new action' do
     visit new_student_path
     expect(page).to have_content("Student Form")
   end
@@ -34,6 +36,10 @@ describe 'form page' do
     expect(page).to have_content("Margaery")
   end
 end
+
+
+
+
 
 describe 'Show page' do
   before do
