@@ -1,0 +1,13 @@
+<h3>Student Form</h3>
+
+  <!--  posting to students -->
+  <%=form_tag({controller: "students", action: "create"}, method: "post") do %>
+  <label>Student first name:</label><br>
+  <%= text_field_tag :first_name %><br>
+
+  <label>Student last name:</label><br>
+  <%= text_field_tag :last_name %><br>
+
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= submit_tag "Submit Student" %>
+<%end%>
