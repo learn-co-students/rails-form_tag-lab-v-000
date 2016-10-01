@@ -1,0 +1,17 @@
+<h2>New Student Form</h2>
+
+<%= form_tag students_path do %>
+  <label>First Name:</label><br>
+  <%= text_field_tag :'first_name' %> <br>
+ <!--  <input type="text" id="post_title" name="post[title]"><br> -->
+  <label>Last Name:</label><br>
+   <%= text_field_tag :'last_name' %> <br>
+
+ <!--  <textarea id="post_description" name="post[description]"></textarea><br> -->
+ 
+ 
+  <%= submit_tag "Submit Student" %>
+<!--   <input type="submit" value="Submit Post"> -->
+<% end %>
+ 
+<%= params.inspect %>
