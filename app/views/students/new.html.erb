@@ -1,6 +1,7 @@
 <h1>Student Form</h1>
 
 <%= form_tag(students_path, :method => "post") do %>
+  <%= session[:form_params] %>
   <label>First name:</label><br>
   <%= text_field_tag :'first_name' %><br>
 
@@ -9,5 +10,3 @@
 
   <%= submit_tag "Submit Student" %>
 <% end %>
-
-<%= params.inspect %>
