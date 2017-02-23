@@ -1,0 +1,15 @@
+<h3>Student Form</h3> 
+
+<%= form_tag students_path do %>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <label>first name:</label><br>
+  <%= text_field_tag :first_name %><br>
+ 
+  <label>last name:</label><br>
+  <%= text_field_tag :last_name %><br>
+ 
+  <%= submit_tag "Submit Student" %>
+<% end %>
+
+ 
+<%= session[:form_params] %>
