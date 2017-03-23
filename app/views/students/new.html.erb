@@ -1,0 +1,15 @@
+Student Form
+
+<form action="<%= students_path %>" method="POST">
+  <label>first_name</label><br>
+  <input type="text" id="first_name" name="first_name"><br>
+
+  <label>last_name</label><br>
+  <input type="text" id="last_name" name="last_name"><br>
+
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="submit" value="Submit Student">
+</form>
+
+
+<%= params.inspect %>
