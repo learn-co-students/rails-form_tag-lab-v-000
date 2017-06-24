@@ -10,4 +10,4 @@
   <%= submit_tag "Submit Student" %>
 <% end %>
 
-<%= params.inspect %>
+<%= session[:form_params] if session[:form_params] %>
