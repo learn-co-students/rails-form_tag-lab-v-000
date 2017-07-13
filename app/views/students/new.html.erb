@@ -1,0 +1,12 @@
+<h1>Student Form</h1>
+
+<%= form_tag(students_path, method: "post") do%>
+    <%= label_tag(:first_name, "First Name") %>
+    <%= text_field_tag(:'student[first_name]', params[:student], :id => "first_name") %>
+
+    <%= label_tag(:last_name, "Last Name") %>
+    <%= text_field_tag(:'student[last_name]', params[:student], :id => "last_name") %>
+
+    <%= submit_tag("Submit Student", :name => :submit, :id => :submit) %>
+<% end %>
+
