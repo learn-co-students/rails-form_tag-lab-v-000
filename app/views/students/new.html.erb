@@ -1,0 +1,13 @@
+<h3>Student Form</h3>
+
+<%= form_tag create_student_path do %>
+	<label>First name:</label><br>
+	<%= text_field_tag :'first_name' %><br>
+
+	<label>Last name:</label><br>
+	<%= text_field_tag :'last_name' %><br>
+
+	<button type="submit" value="Submit Student">Submit Student</button>
+<% end %>
+
+<%= session[:custom_params] unless !session[:custom_params] %>
