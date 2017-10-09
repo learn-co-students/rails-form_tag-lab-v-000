@@ -1,0 +1,11 @@
+<h2>Student Form</h2>
+<%= form_tag students_path do %>
+  <!-- form must have authenticity_token for fails to accept proper session (CSRF protection) -->
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <label>First Name:</label>
+  <%=text_field_tag :"first_name" %><br>
+
+  <label>Last Name:</label>
+  <%=text_field_tag :"last_name" %><br>
+  <%= submit_tag "Submit Student" %>
+<%end%>
