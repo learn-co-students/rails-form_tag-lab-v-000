@@ -14,7 +14,7 @@ class StudentsController < ApplicationController
   def create
     @student = Student.create(first_name: params[:first_name], last_name: params[:last_name])
 
-    redirect_to student_path(@student)
+    redirect_to student_path(@student) #student_path need :id as argument; redirects to show page
   end
 
 end
