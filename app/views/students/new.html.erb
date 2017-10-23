@@ -1,0 +1,12 @@
+<h3>Student Form</h3>
+<form>
+ <label>First name:</label><br>
+ <input type="text" id="first_name" name="student[first_name]"><br>
+
+ <label>Last name:</label><br>
+ <textarea id="last_name" name="student[last_name]"></textarea><br>
+
+ <input type="submit" value="Submit Student">
+</form>
+
+<%= params.inspect %>
