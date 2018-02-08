@@ -1,0 +1,21 @@
+<h1>Student Form</h1>
+
+<%= form_tag students_path do %>
+  <label>First Name:</label><br>
+  <%= text_field_tag :'first_name' %><br>
+
+  <label>Last Name:</label><br>
+  <%= text_area_tag :'last_name' %><br>
+
+  <%= submit_tag "Submit Student" %>
+<% end %>
+
+</form>
+
+<%= params.inspect %>
+
+<% if Student.last %>
+    <h2>Most recent student created:</h2>
+    <p>First name: <%= Student.last.first_name %></p>
+    <p>Last name: <%= Student.last.last_name %></p>
+<% end %>
