@@ -7,7 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<nav style="display:inline-block;">
 
+  <%= link_to "Home", students_path %>
+  <%= link_to "New Student", new_student_path %>
+</nav>
 <%= yield %>
 
 </body>
