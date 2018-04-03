@@ -1,6 +1,7 @@
 <h3>Student Form</h3>
 <form action="/students"method="POST">
 <!--<form action="<%= students_path %>"method="POST">-->
+<%= form_tag students_path do %>
 <p>Student's first name:<%=text_field_tag :first_name%></p>
 <p>Last name:<%=text_field_tag :last_name%></p>
 <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
