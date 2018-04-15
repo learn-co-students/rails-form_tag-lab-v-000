@@ -1,0 +1,7 @@
+<h1>Student Form</h1>
+
+<%= form_tag students_path do %>
+  <%= text_field_tag 'first_name', placeholder: 'Enter first name here' %>
+  <%= text_field_tag 'last_name', placeholder: 'Enter last name here' %>
+  <%= submit_tag 'Submit Student' %>
+<% end %>
