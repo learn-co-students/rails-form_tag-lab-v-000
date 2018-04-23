@@ -1,10 +1,9 @@
 <h1>Student Form</h1>
 
-<% if params %>
-	<%= params.inspect %>
-<%end%>
 
-<%= form_tag new_student_path do %>
+	<%= session[:form_params] if session[:form_params] %>
+
+<%= form_tag students_path do %>
 	<label>First Name:</label><br>
 	<%= text_field_tag :'first_name' %><br>
 
@@ -13,3 +12,5 @@
 
 	<%= submit_tag "Submit Student" %>
 <%end%>
+
+
