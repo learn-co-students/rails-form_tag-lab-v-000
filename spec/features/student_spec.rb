@@ -19,17 +19,17 @@ end
 
 describe 'form page' do
   it 'renders the form with the new action' do
-    visit new_student_path
+    visit new_student_path #new method in controller,new page in view, and new route in routes
     expect(page).to have_content("Student Form")
   end
 
   it 'ensures that the new form submits content and renders form content' do
     visit new_student_path
 
-    fill_in 'first_name', with: "Margaery"
+    fill_in 'first_name', with: "Margaery" #name field in path student/new
     fill_in 'last_name', with: "Tyrell"
 
-    click_on "Submit Student"
+    click_on "Submit Student" #submit button
 
     expect(page).to have_content("Margaery")
   end
@@ -38,6 +38,7 @@ end
 describe 'Show page' do
   before do
     @student = Student.create!(first_name: "Daenerys", last_name: "Targaryen")
+    # this is creating first and last name in controller using params
   end
 
   it 'renders properly' do

@@ -1,0 +1,23 @@
+<h1>Student Form</h1>
+
+
+<!-- <form class="" action="<%= students_path %>" method="post">
+  <label for="">First Name:</label><br>
+  <input type="text" name="student[first_name]" id="first_name"><br>
+  <label for="">Last Name</label>
+  <input type="text" name="student[last_name]" id="last_name"><br>
+  <br>
+  <input type="submit" name="" value="Submit Student">
+</form>
+
+ refactoring -->
+
+ <%= form_tag students_path do %>
+  <label for="">First name:</label><br>
+  <input type="text" name="student[first_name]" id="first_name"><br>
+
+  <label for="">Last Name</label><br>
+  <input type="text" name="student[last_name]" id="last_name"><br>
+  <br>
+  <%= submit_tag value="Submit Student" %>
+ <%end%>
