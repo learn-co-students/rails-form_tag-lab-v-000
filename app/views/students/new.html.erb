@@ -1,0 +1,19 @@
+<title>Student Form</title>
+
+<form action= "<%=students_path%>" method= "POST">
+<%=form_tag students_path do %>
+
+<label>First Name: </label>
+<br>
+
+<%=text_field_tag :first_name,params[:first_name], id: 'first_name'%><br>
+
+<label>Last Name: </label><br>
+
+<%=text_field_tag :last_name, params[:last_name], id:'last_name'%><br>
+
+<%=submit_tag "Submit Student" %>
+<%end%>
+</form>
+
+<%=params.inspect%>
