@@ -1,0 +1,12 @@
+<h1>Student Form</h1>
+
+<form action="<%= students_path %>" method="POST">
+  <label>Student name:</label><br>
+  <input type="text" id="first_name" name="first_name"><br>
+
+  <label>Post description:</label><br>
+  <textarea id="last_name" name="last_name"></textarea><br>
+
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="submit" value="Submit Student">
+</form>
