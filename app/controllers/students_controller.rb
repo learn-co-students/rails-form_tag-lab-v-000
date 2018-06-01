@@ -1,5 +1,4 @@
 class StudentsController < ApplicationController
-
   def index
     @students = Student.all
   end
@@ -9,8 +8,8 @@ class StudentsController < ApplicationController
   end
 
   def create
-    Student.new(first_name: params[:first_name], last_name: params[:last_name])
-     redirect_to new_student_path
+    @student = Student.new(first_name: params[:first_name], last_name: params[:last_name])
+    redirect_to students_path(@student.id)
   end
 
 end
