@@ -8,8 +8,8 @@ class StudentsController < ApplicationController
   end
 
   def create
-    @student = Student.new(first_name: params[:first_name], last_name: params[:last_name])
-    redirect_to students_path(@student.id)
+    Student.new(first_name: params[:first_name], last_name: params[:last_name])
+    redirect_to students_path
   end
 
 end
