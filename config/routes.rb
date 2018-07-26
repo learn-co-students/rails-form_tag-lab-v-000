@@ -5,5 +5,5 @@ Rails.application.routes.draw do
 
   get '/students/:id', to: 'students#show', as: 'student'
    
-
+# draw means where we are going//// method is called "action" in rails controller
 end
