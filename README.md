@@ -29,7 +29,7 @@ At a high level, you need to build a form to create a new student, have the form
 * Look at the tests to see which field values you should be using
 
 * Make sure to use the `form_tag` helpers
-
+learn-co-curriculum
 
 ## Resources
 
