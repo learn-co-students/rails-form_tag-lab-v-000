@@ -1,0 +1,9 @@
+<h3>Student Form</h3>
+
+<%= form_tag( students_path) do %>
+    <label for="student_first_name">First Name</label>
+    <%= text_field_tag(:'student[first_name]', nil, id: 'first_name' ) %>
+    <label for="student_last_name">Last Name</label>
+    <%= text_field_tag(:'student[last_name]', nil, id: "last_name")%>
+    <%= submit_tag :'Submit Student'%>
+<% end %>
