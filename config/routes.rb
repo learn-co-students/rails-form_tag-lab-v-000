@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  resources :students, only: :index
-  get '/students/:id', to: 'students#show', as: 'student'
+  root :to => "static#index"
+  resources :students, only: [:index, :new, :create]
+  get '/student/:id', to: 'students#show', as: 'student'
 end

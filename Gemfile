@@ -23,6 +23,10 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+gem 'rack', '~> 1.6.10'
+gem 'xpath', '~> 3.1'
+
 
 group :development, :test do
   gem 'byebug'
