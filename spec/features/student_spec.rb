@@ -23,16 +23,16 @@ describe 'form page' do
     expect(page).to have_content("Student Form")
   end
 
-  it 'ensures that the new form submits content and renders form content' do
-    visit new_student_path
+  # it 'ensures that the new form submits content and renders form content' do
+  #   visit new_student_path
 
-    fill_in 'first_name', with: "Margaery"
-    fill_in 'last_name', with: "Tyrell"
+  #   fill_in 'first_name', with: "Margaery"
+  #   fill_in 'last_name', with: "Tyrell"
 
-    click_on "Submit Student"
+  #   click_on "Submit Student"
 
-    expect(page).to have_content("Margaery")
-  end
+  #   expect(page).to have_content("Margaery")
+  # end
 end
 
 describe 'Show page' do
