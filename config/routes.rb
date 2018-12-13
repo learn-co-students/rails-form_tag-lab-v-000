@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
   resources :students
-  post '/students/new', to: 'students#new'
+  
+  post '/students/create', to: 'students#new'
 end
