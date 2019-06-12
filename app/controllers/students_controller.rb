@@ -18,6 +18,7 @@ class StudentsController < ApplicationController
     #redirect_to prefix_path
     redirect_to students_path
     #have the form redirect back to the new view template ^ from readme
+    #Readme is wrong you need to have it redirect to students path 
   end
   
   
