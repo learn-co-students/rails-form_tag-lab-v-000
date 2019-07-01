@@ -4,3 +4,5 @@ Rails.application.routes.draw do
     #resources :controller_name/folder_name, only: [:method/path, :method/path]
   get '/students/:id', to: 'students#show', as: 'student'
 end
+
+#HELLO WORLD
