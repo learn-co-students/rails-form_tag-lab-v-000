@@ -1,5 +1,28 @@
 <%= render "form" %>
 
-<%= session[:form_params] if session[:form_params] %> 
+# <%= session[:form_params] if session[:form_params] %> 
 
-<%=params.inspect%>
+<form>
+
+    <h1><%= @student.to_s %></h1>
+
+    <label>First Name:</label><br>
+    <input type="text" id="first_name" name="student[first_name]"><br>
+    <%= text_field_tag :first_name %><br>
+
+
+    <label>Last Name:</label><br>
+    <input type="text" id="last_name" name="student[last_name]"><br>
+    <%= text_field_tag :last_name %><br>
+
+ 
+    <input type="submit" value="Submit New Student">
+
+</form>
+ 
+<%= params.inspect %>  
+
+
+  
+  
+  

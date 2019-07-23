@@ -10,7 +10,8 @@ class StudentsController < ApplicationController
   def show
   end
 
-  def new
+  def new 
+    
   end
 
   def create
