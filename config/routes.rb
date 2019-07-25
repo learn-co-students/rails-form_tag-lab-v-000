@@ -1,7 +1,7 @@
 
 Rails.application.routes.draw do
-  resources :students, only: [:index, :show, :new]
+  resources :students, only: [:index, :show, :create, :new]
   
-  post 'students', to: 'students#new'
+  # post '/students', to: 'students#create'
 
 end

@@ -1,15 +1,13 @@
 <%= render "form" %>
 
-# <%= session[:form_params] if session[:form_params] %> 
+<%= session[:form_params] if session[:form_params] %> 
 
-<form>
-
+<form action='post'/new_student_path'
     <h1><%= @student.to_s %></h1>
 
     <label>First Name:</label><br>
     <input type="text" id="first_name" name="student[first_name]"><br>
     <%= text_field_tag :first_name %><br>
-
 
     <label>Last Name:</label><br>
     <input type="text" id="last_name" name="student[last_name]"><br>
@@ -22,6 +20,12 @@
  
 <%= params.inspect %>  
 
+<form action="/articles/<%= @article.id %>" method="post">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+  <input type="text" name="title">
+  <input type="text" name="content">
+  <input type="submit" value="submit">
+</form>
 
   
   
