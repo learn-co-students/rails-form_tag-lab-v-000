@@ -1,0 +1,19 @@
+<h2>Student Form</h2>
+
+<form action="<%= students_path %>" method="post">
+  <p>
+    <label>First name: </label>
+    <input type="text" name="student[first_name]">
+  </p>
+  
+  <p>
+    <label>Last name: </label>
+    <input type="text" name="student[last_name]">
+  </p>
+
+  <p>
+    <input type="submit" id="Submit Student">
+  </p>
+</form>
+
+<%= params.inspect %>
