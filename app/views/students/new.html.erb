@@ -1,0 +1,26 @@
+<h2>Student Form</h2>
+
+<%= form_tag students_path %>
+  <p>
+    <%= label_tag "student_first_name", "First name:" %> <!-- I added this part -->
+    <%= text_field_tag :"student[first_name]" %>
+    <!-- As I look at the docs, that colon before the quotes may not be needed. -->
+  </p>
+  
+  <p>
+    <%= label_tag "student_last_name", "Last name:" %>
+    <%= text_field_tag :"student[last_name]" %>
+  </p>
+
+  <!-- IMPORTANT!!! Be careful of when to use hyphens - and when to use underscores _ 
+  <input type="hidden" name="authenticity_token" value="<%#= form_authenticity_token %>"> -->
+
+  <!-- hidden_field_tag, not hidden_input_tag -->
+  <%#= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+  <p>
+    <%= submit_tag "Submit Student" %>
+  </p>
+</form>
+
+<%#= params.inspect %>
