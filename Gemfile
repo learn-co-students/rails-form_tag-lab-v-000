@@ -22,7 +22,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-
+group :development do
+  gem 'web-console'
+end
 
 group :development, :test do
   gem 'byebug'
@@ -31,4 +33,5 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'capybara'
   gem 'database_cleaner'
+
 end
