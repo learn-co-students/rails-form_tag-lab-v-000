@@ -1,17 +1,12 @@
 <h1> Student Form</h1><br>
 
-<%= form_tag new_student_path do %>
+<%= form_tag students_path do %>
 
     <%= text_field_tag 'student[first_name]' %><br>
 
     <%= text_field_tag 'student[last_name]' %><br>
 
-    <%= link_to 'Submit Student'%>
+    <%= submit_tag 'Submit Student'%>
 <% end %>
 
-<%# submit_tag prompts for ActionController::RoutingError:
-       No route matches [POST] "/students/new"
-       *Look about creating the POST  %>
-
-<%# link_to gives prompts Failure/Error: expect(page).to have_content("Margaery") expected to find text "Margaery" in "Student Form\nSubmit Student" Something is awry in line 9
-*Seems a better error message to get.. but can't figure it out%>
+<%= session[:form_params] if session[:form_params]%>
