@@ -1,0 +1,15 @@
+<h1> Student Form </h1>
+
+
+<!--The form_tag Rails helper is smart enough 
+to know that we want to submit the form via the POST method-->
+
+<%= form_tag students_path do %>
+  <label>Student First Name</label><br>
+  <%= text_field_tag :'student[first_name]' %><br>
+  <label>Student Last Name</label><br>
+  <%= text_field_tag :'student[last_name]' %><br>
+
+  <%=submit_tag "Submit Student"%>
+<% end %>
+
