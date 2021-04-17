@@ -1,0 +1,28 @@
+<!--when editing a file like this keep file 
+as html until finished editing than change to html.erb file
+much better for text editor autocomplete-->
+
+<h1> Student Form</h1>
+<%= form_tag students_path do %>
+<!-- Readme is wrong you need to have it redirect to students path - Abdoul Diallo -->
+<!-- <form action="<%= new_student_path %>" method="POST"> -->
+    <label>First Name:</label>
+    <%= text_field_tag :'student[first_name]' %>
+     <!-- ^ Helper method using erb tags and breaks and replaces <input type="text" id="student_first_name" name="student[first_name]"><br> -->
+    <label>Last Name:</label>
+    <%= text_field_tag :'student[last_name]' %>
+
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+    <!-- replaces <input type="hidden" name="authenticity_token" id="authenticity_token" value="7SuubeJGbqfm4rO+F5VTS6Wl1SNCTGOr/mrYZKOQLbtICzajfcEHL6n5h2n4FPHqTieBmep1MhgMr6w+SapR0A==" /> -->
+    <!--Rails blocks hacks from happening by default by requiring that a unique authenticity token be submitted with each form. This authenticity token is stored in the session and can't be hijacked by hackers: -->
+    <%= submit_tag "Submit Student" %>
+<% end %>
+
+
+<!-- We don't need to use options{} all. This is a little tricky because Rails abstracts away the need to specifically say options. new_student_path is the option that you are passing to the form.
+ It really is magic. (The ammount of shortcuts in the rails section) It will be that way for a while as you work through the rails section.-->
+
+<!-- 	Jebediah Elliott  -->
+    
+
